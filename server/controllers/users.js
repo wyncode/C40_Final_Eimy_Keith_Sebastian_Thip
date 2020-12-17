@@ -1,0 +1,12 @@
+exports.getCurrentUser = (req, res) => {};
+exports.updateCurrentUser = (req, res) => {};
+exports.logoutUser = (req, res) => {};
+exports.logoutAllDevices = (req, res) => {};
+exports.deleteUser = (req, res) => {};
+exports.uploadAvatar = (req, res) => {};
+exports.updatePassword = (req, res) => {};
+exports.fetchAllUsers = (req, res) => {};
+exports.createUser = (req, res) => {};
+exports.loginUser = (req, res) => {};
+exports.requestPasswordReset = (req, res) => {};
+exports.passwordRedirect = (req, res) => {};

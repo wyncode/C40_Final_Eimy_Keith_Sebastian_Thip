@@ -1,5 +1,5 @@
 const router = require('express').Router(),
-  { getSpecificCommunity } = require('../../controllers/reviews');
+  { getSpecificCommunity } = require('../../controllers/communities');
 
 router.get('/:id', getSpecificCommunity);
 

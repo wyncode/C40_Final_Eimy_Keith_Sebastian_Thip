@@ -7,14 +7,22 @@ const listingSchema = new mongoose.Schema(
       required: true
     },
     contactInfo: {
-      type: Boolean,
-      default: false
+      name: {
+        type: String
+      },
+      email: {
+        type: String
+      },
+      phoneNumber: {
+        type: String
+      }
     },
     location: {
       type: String
     },
     category: {
-      type: String
+      type: String,
+      enum: ['home', 'service']
     }
   },
   {

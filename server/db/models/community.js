@@ -7,23 +7,38 @@ const communitySchema = new mongoose.Schema(
       required: true,
       trim: true
     },
-    area: {
-      type: Boolean,
-      default: false
-    },
-    schools: {
-      type: String,
-      trim: true
-    },
-    localOpinions: {
-      type: Object
-    },
-    localOfficials: {
-      type: Object
-    },
-    safetyAndCrimes: {
-      type: Object
-    }
+    area: [
+      {
+        type: Object
+      }
+    ],
+    schools: [
+      {
+        type: Object
+      }
+    ],
+    localOpinions: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Review'
+      }
+    ],
+    localOfficials: [
+      {
+        type: Object
+      }
+    ],
+    safetyAndCrimes: [
+      {
+        type: Object
+      }
+    ],
+    reviews: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Review'
+      }
+    ]
   },
   {
     timestamps: true

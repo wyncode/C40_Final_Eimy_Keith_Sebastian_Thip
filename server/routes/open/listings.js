@@ -1,5 +1,5 @@
 const router = require('express').Router(),
-  { getSpecificListing } = require('../../controllers/reviews');
+  { getSpecificListing } = require('../../controllers/listings');
 
 router.get('/:id', getSpecificListing);
 

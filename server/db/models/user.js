@@ -54,21 +54,21 @@ const userSchema = new mongoose.Schema(
     },
     businessInfo: {
       businessName: {
-        type: String,
-        required: true
+        type: String
       },
       description: {
-        type: Boolean,
-        default: false
+        type: String
       },
       contactInfo: {
         type: String
       },
       verification: {
-        type: Object
+        type: Boolean,
+        default: false
       },
       license: {
-        type: Object
+        type: Boolean,
+        default: false
       },
       location: {
         type: String
@@ -79,20 +79,14 @@ const userSchema = new mongoose.Schema(
     },
     favorites: [
       {
-        description: {
-          type: String,
-          required: true
-        },
-        contactInfo: {
-          type: Boolean,
-          default: false
-        },
-        location: {
-          type: String
-        },
-        category: {
-          type: String
-        }
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Listing'
+      }
+    ],
+    reviews: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Review'
       }
     ]
   },
