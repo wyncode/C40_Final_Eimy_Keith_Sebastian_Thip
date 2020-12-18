@@ -1,7 +1,16 @@
 import { useState, useEffect } from 'react';
 import ContextDemo from './components/ContextDemo';
 
+import React from 'react';
+import Navbar from './components/Navbar/Navbar';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Buy from './Pages/Buy/Buy';
+import Rent from './Pages/Rent/Rent';
+import Home from './Pages/Home/Home';
+import SignIn from './Pages/SignIn/SignIn';
+import Manage from './Pages/Manage/Manage';
+import Community from './Pages/Community/Community';
 
 const App = () => {
   const [serverMessage, setServerMessage] = useState('');
@@ -15,10 +24,18 @@ const App = () => {
   useEffect(fetchDemoData, []);
 
   return (
-    <div id="demo">
-      <h3>Hello from client/src/App.js</h3>
-      <ContextDemo />
-      <h3>{serverMessage}</h3>
+    <div className="App">
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/buy" component={Buy} />
+          <Route exact path="/rent" component={Rent} />
+          <Route exact path="/manage" component={Manage} />
+          <Route exact path="/community" component={Community} />
+          <Route exact path="/signin" component={SignIn} />
+        </Switch>
+      </Router>
     </div>
   );
 };
