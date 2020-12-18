@@ -1,6 +1,10 @@
 const router = require('express').Router(),
-  { getSpecificListing } = require('../../controllers/listings');
+  {
+    getSpecificListing,
+    fetchAllListings
+  } = require('../../controllers/listings');
 
 router.get('/:id', getSpecificListing);
+router.get('/', fetchAllListings);
 
 module.exports = router;

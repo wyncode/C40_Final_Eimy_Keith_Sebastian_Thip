@@ -70,7 +70,7 @@ const userSchema = new mongoose.Schema(
         type: Boolean,
         default: false
       },
-      location: {
+      locationZip: {
         type: String
       },
       category: {

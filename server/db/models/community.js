@@ -2,7 +2,12 @@ const mongoose = require('mongoose');
 
 const communitySchema = new mongoose.Schema(
   {
-    descrption: {
+    name: {
+      type: String,
+      required: true,
+      trim: true
+    },
+    description: {
       type: String,
       required: true,
       trim: true

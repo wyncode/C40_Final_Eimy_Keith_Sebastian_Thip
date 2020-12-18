@@ -18,6 +18,6 @@ router.post('/logoutAll', logoutAllDevices);
 router.delete('/', deleteUser);
 router.post('/avatar', uploadAvatar);
 router.put('/password', updatePassword);
-router.get('/all', isAdmin(), fetchAllUsers);
+router.get('/', isAdmin(), fetchAllUsers);
 
 module.exports = router;
