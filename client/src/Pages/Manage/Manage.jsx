@@ -3,7 +3,7 @@ import './Manage.css';
 
 function Manage() {
   return (
-    <div>
+    <div className="manage">
       <h1>Manage Page</h1>
     </div>
   );

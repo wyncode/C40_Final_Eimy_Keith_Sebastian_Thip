@@ -1,11 +1,18 @@
 import React from 'react';
 import './Home.css';
+import Header from '../../components/Home-Header/Header';
+import HomeBody from '../../components/Home-Body/Body';
 
 function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
+    <>
+      <div className="header">
+        <Header />
+      </div>
+      <div className="body">
+        <HomeBody />
+      </div>
+    </>
   );
 }
 

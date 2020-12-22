@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  text-align: center;
+  height: 80vh;
+  background-image: url('../../Assests/house.jpg');
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+  padding-left: 10px;
+}

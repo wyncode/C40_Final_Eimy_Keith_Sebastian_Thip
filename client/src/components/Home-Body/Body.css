@@ -1,0 +1,13 @@
+.body {
+  border: 1px solid black;
+}
+
+.body ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.body li {
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
