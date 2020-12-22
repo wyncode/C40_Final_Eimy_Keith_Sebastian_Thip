@@ -50,6 +50,9 @@ const communitySchema = new mongoose.Schema(
   }
 );
 
+//nothing user can do but view and review (which is taken care of in the review model)
+//community has many house listings for sale (What do we do with this information?)
+
 const Community = mongoose.model('Community', communitySchema);
 
 module.exports = Community;

@@ -18,6 +18,9 @@ const reviewSchema = new mongoose.Schema({
   }
 });
 
+//user can rate and leave reviews for the community/neighborhood,
+//as well as listing services
+
 const Review = mongoose.model('Review', reviewSchema);
 
 module.exports = Review;
