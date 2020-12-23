@@ -1,13 +1,141 @@
 .body {
-  border: 1px solid black;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .body ul {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .body li {
   list-style-type: none;
   font-family: Arial, Helvetica, sans-serif;
+}
+.buyBody {
+  border: 1px solid black;
+  box-shadow: 0 0 5px 0;
+  padding: 40px;
+  width: 200px;
+
+  /* border-radius:150px; */
+}
+.buyBody:hover {
+  transform: scale(1.1);
+}
+.buyContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.buyIcon {
+  color: #0f2027; /* fallback for old browsers */
+  color: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.rentBody {
+  border: 1px solid black;
+  box-shadow: 0 0 10px 0;
+  padding: 40px;
+  width: 200px;
+  /* border-radius:150px; */
+}
+.rentBody:hover {
+  transform: scale(1.1);
+}
+.rentContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.rentIcon {
+  color: #0f2027; /* fallback for old browsers */
+  color: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.communityBody {
+  border: 1px solid black;
+  box-shadow: 0 0 10px 0;
+  padding: 40px;
+  width: 200px;
+  /* border-radius:150px; */
+}
+.communityBody:hover {
+  transform: scale(1.1);
+}
+.communityContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.communityIcon {
+  color: #0f2027; /* fallback for old browsers */
+  color: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.manageBody {
+  border: 1px solid black;
+  box-shadow: 0 0 10px 0;
+  padding: 40px;
+  width: 200px;
+
+  /* border-radius:150px; */
+}
+.manageBody:hover {
+  transform: scale(1.1);
+}
+.manageContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.managaeIcon {
+  color: #0f2027; /* fallback for old browsers */
+  color: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
