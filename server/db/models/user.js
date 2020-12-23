@@ -80,39 +80,24 @@ const userSchema = new mongoose.Schema(
       category: {
         type: String
       }
-    },
-    favorites: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Listing'
-      }
-    ],
-    reviews: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Review'
-      }
-    ]
+    }
   },
   {
     timestamps: true
   }
 );
 
-//User has a virtual relation between listing and review.
-//proUser has a virtual relation between listing.
-
 /**
- * Create a virtual relation between User and listing; User and review.
+ * Create a virtual relation between user and listing; user and review.
  */
 userSchema.virtual('listings', {
   ref: 'Listing',
   localField: '_id',
-  foreignField: 'owner'
+  foreignField: 'proOwner'
 });
 
-userSchema.virtual('communitites', {
-  ref: 'Community',
+userSchema.virtual('reviews', {
+  ref: 'Review',
   localField: '_id',
   foreignField: 'owner'
 });

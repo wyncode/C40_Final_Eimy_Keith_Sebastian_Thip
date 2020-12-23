@@ -29,7 +29,8 @@ const listingSchema = new mongoose.Schema(
     },
     proOwner: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User'
+      ref: 'User',
+      require: true
     }
   },
   {
@@ -37,9 +38,14 @@ const listingSchema = new mongoose.Schema(
   }
 );
 
-//user can view, review, contact, and pay for services
-//proUser can offer services availble
-//line 31, does it make sense to have the ProOwner?
+/**
+ * Create a virtual relation between listing and review.
+ */
+listingSchema.virtual('reviews', {
+  ref: 'Review',
+  localField: '_id',
+  foreignField: 'listingId'
+});
 
 const Listing = mongoose.model('Listing', listingSchema);
 

@@ -37,12 +37,6 @@ const communitySchema = new mongoose.Schema(
       {
         type: Object
       }
-    ],
-    reviews: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Review'
-      }
     ]
   },
   {
@@ -50,8 +44,20 @@ const communitySchema = new mongoose.Schema(
   }
 );
 
-//nothing user can do but view and review (which is taken care of in the review model)
-//community has many house listings for sale (What do we do with this information?)
+/**
+ * Create a virtual relation between community and listing; community and review.
+ */
+communitySchema.virtual('listings', {
+  ref: 'Listing',
+  localField: '_id',
+  foreignField: 'location'
+});
+
+communitySchema.virtual('reviews', {
+  ref: 'Review',
+  localField: '_id',
+  foreignField: 'communityId'
+});
 
 const Community = mongoose.model('Community', communitySchema);
 
