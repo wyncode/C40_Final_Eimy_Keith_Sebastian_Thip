@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+Review = require('./review');
 
 const listingSchema = new mongoose.Schema(
   {
@@ -42,7 +43,7 @@ const listingSchema = new mongoose.Schema(
  * Create a virtual relation between listing and review.
  */
 listingSchema.virtual('reviews', {
-  ref: 'Review',
+  ref: Review,
   localField: '_id',
   foreignField: 'listingId'
 });

@@ -91,13 +91,13 @@ const userSchema = new mongoose.Schema(
  * Create a virtual relation between user and listing; user and review.
  */
 userSchema.virtual('listings', {
-  ref: 'Listing',
+  ref: Listing,
   localField: '_id',
   foreignField: 'proOwner'
 });
 
 userSchema.virtual('reviews', {
-  ref: 'Review',
+  ref: Review,
   localField: '_id',
   foreignField: 'owner'
 });

@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+Listing = require('./listing');
+Review = require('./review');
 
 const communitySchema = new mongoose.Schema(
   {
@@ -48,13 +50,13 @@ const communitySchema = new mongoose.Schema(
  * Create a virtual relation between community and listing; community and review.
  */
 communitySchema.virtual('listings', {
-  ref: 'Listing',
+  ref: Listing,
   localField: '_id',
   foreignField: 'location'
 });
 
 communitySchema.virtual('reviews', {
-  ref: 'Review',
+  ref: Review,
   localField: '_id',
   foreignField: 'communityId'
 });
