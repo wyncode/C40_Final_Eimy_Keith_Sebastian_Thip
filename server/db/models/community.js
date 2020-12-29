@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-Listing = require('./listing');
-Review = require('./review');
+const mongoose = require('mongoose'),
+  Listing = require('./listing'),
+  Review = require('./review');
 
 const communitySchema = new mongoose.Schema(
   {

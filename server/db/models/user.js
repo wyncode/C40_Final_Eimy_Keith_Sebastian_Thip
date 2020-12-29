@@ -1,8 +1,9 @@
-const mongoose = require('mongoose');
-validator = require('validator');
-(bcrypt = require('bcryptjs')), (jwt = require('jsonwebtoken'));
-Listing = require('./listing');
-Review = require('./review');
+const mongoose = require('mongoose'),
+  validator = require('validator'),
+  bcrypt = require('bcryptjs'),
+  jwt = require('jsonwebtoken'),
+  Listing = require('./listing'),
+  Review = require('./review');
 
 const userSchema = new mongoose.Schema(
   {
