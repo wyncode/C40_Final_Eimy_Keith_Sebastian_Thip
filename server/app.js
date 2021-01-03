@@ -7,7 +7,8 @@ const express = require('express'),
   userRouterTwo = require('./routes/secure/reviews'),
   openRoutes = require('./routes/open/communities'),
   openRoutesTwo = require('./routes/open/listings'),
-  openRoutesThree = require('./routes/open/users');
+  openRoutesThree = require('./routes/open/users'),
+  axios = require('axios');
 
 const app = express();
 
@@ -19,6 +20,49 @@ app.use(morgan('dev'));
 app.use(openRoutes);
 app.use(openRoutesTwo);
 app.use(openRoutesThree);
+
+// const getYelpAPI = async () => {
+//   return (axios.get('https://api.yelp.com/v3/businesses/search?location="miami"&term="lunch"', { headers: { Authorization: `Bearer ${process.env.YELP_API_KEY}` } })
+//   )
+// }
+const getYelpAPI = async () => {
+  return axios.get(
+    'https://api.yelp.com/v3/businesses/search?location="2650 NW 5 Ave, Miami, FL 33127"&term="lunch"&radius=300',
+    { headers: { Authorization: `Bearer ${process.env.YELP_API_KEY}` } }
+  );
+};
+app.get('/api/yelp', async (request, response) => {
+  try {
+    const businessData = await getYelpAPI();
+    response.json(businessData.data.businesses);
+  } catch (error) {
+    console.log(error);
+  }
+});
+const searchYelpAPI = async (request, response) => {
+  const { term } = request.query;
+  return axios.get(
+    `https://api.yelp.com/v3/businesses/search?location=Miami&term=${term}`,
+    { headers: { Authorization: `Bearer ${process.env.YELP_API_KEY}` } }
+  );
+};
+app.get('/api/search', async (request, response) => {
+  try {
+    const businessData = await searchYelpAPI(request, response);
+    response.json(businessData.data.businesses);
+  } catch (e) {
+    console.log(e);
+  }
+});
+
+// app.get('/api/yelp', async (request, response) => {
+//   try {
+//     const resp = getYelpAPI();
+//     response.json(resp.data);
+//     console.log(resp.data)
+//   } catch (e) {
+//     console.log(e)
+//   }
 
 // Serve any static files
 if (process.env.NODE_ENV === 'production') {

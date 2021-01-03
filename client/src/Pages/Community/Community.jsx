@@ -1,11 +1,16 @@
 import React from 'react';
 import './Community.css';
 
+import MyMapComponent from '../../components/GoogleMap/GoogleMap';
+
 function Community() {
   return (
-    <div className="community">
-      <h1>Community Page</h1>
-    </div>
+    <>
+      <div className="communityPage">
+        <h1>Community Page</h1>
+      </div>
+      <MyMapComponent />
+    </>
   );
 }
 
