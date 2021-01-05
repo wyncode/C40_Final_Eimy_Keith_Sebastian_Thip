@@ -147,16 +147,15 @@ li {
   text-align: -webkit-match-parent;
 }
 
-.TabContent > .active {
-  display: block;
-}
-
 .tab-content {
   height: 40px;
 }
 
 .tab-pane {
   transition: opacity 0.15s linear;
+}
+
+.active {
 }
 
 .HeaderSearchBar {

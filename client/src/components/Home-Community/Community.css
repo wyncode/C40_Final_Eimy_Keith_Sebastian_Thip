@@ -3,3 +3,29 @@ img {
   flex-wrap: wrap;
   padding: 5px;
 }
+
+.CommunityImage {
+  top: 250px;
+  left: -30%;
+  /* position: absolute; */
+  animation: move 11s linear 1s infinite;
+  width: 150px;
+}
+
+@-webkit-keyframes move {
+  from {
+    left: -30%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes moveFirst {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 100%;
+  }
+}
