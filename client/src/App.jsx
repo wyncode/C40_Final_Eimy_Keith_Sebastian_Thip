@@ -1,7 +1,7 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import ContextDemo from './components/ContextDemo';
 
-import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import './App.css';
@@ -14,17 +14,10 @@ import Manage from './Pages/Manage/Manage';
 import Community from './Pages/Community/Community';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
+import { FooterContainer } from './components/Containers/footer';
 
 const App = () => {
   const [serverMessage, setServerMessage] = useState('');
-
-  const fetchDemoData = () => {
-    fetch('/api/demo')
-      .then((response) => response.json())
-      .then((data) => setServerMessage(data.message));
-  };
-
-  useEffect(fetchDemoData, []);
 
   return (
     <div className="App">
@@ -41,7 +34,8 @@ const App = () => {
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
         </Switch>
-        <Footer />
+        <FooterContainer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );

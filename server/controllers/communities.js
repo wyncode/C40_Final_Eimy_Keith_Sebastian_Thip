@@ -8,3 +8,11 @@ exports.getSpecificCommunity = async (req, res) => {
     res.json({ error: e.toString() });
   }
 };
+
+exports.getMapKey = (req, res) => {
+  try {
+    res.json({ key: process.env.GOOGLE_MAPS_KEY });
+  } catch (error) {
+    console.log(error);
+  }
+};
