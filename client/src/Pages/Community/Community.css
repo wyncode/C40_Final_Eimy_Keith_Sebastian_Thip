@@ -1,3 +1,54 @@
 .communityPage {
   margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.GoogleSearchForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.GoogleSearchBar {
+  border: none;
+  box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.15);
+  width: 1095px;
+  height: 70px;
+  padding-left: 10px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.GoogleSearchBar:focus {
+  outline: none;
+}
+.GoogleSearchButton {
+  background: none;
+  border: none;
+}
+.GoogleSearchButton:hover {
+  cursor: pointer;
+}
+
+.GoogleSearchButton:focus {
+  outline: none;
+}
+.SearchIcon {
+  margin-top: -5px;
+  background: none;
+}
+
+.Map {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.Overview {
+  font-size: 60px;
+  color: #0f2027;
 }

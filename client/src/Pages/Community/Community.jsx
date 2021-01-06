@@ -15,7 +15,7 @@ function Community() {
   return (
     <>
       <div className="communityPage">
-        <h1>Community Page</h1>
+        <h1 className="Overview">Community Overview</h1>
       </div>
       <MyMapComponent mapKey={mapKey} />
     </>
