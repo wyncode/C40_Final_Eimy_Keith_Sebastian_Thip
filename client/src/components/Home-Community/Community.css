@@ -29,3 +29,10 @@ img {
     left: 100%;
   }
 }
+
+.CommunityHeader {
+  text-align: center;
+  color: #0f2027;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}

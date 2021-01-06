@@ -1,11 +1,12 @@
 .body {
   margin-top: 130px;
   margin-bottom: 40px;
+  margin-left: -25px;
 }
 
 .body ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -17,7 +18,7 @@
   border: 1px solid black;
   box-shadow: 0 0 5px 0;
   padding: 40px;
-  width: 200px;
+  width: 270px;
 
   /* border-radius:150px; */
 }
@@ -33,25 +34,13 @@
 }
 
 .buyIcon {
-  color: #0f2027; /* fallback for old browsers */
-  color: -webkit-linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  color: linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-left: 50px;
 }
 .rentBody {
   border: 1px solid black;
   box-shadow: 0 0 10px 0;
   padding: 40px;
-  width: 200px;
+  width: 270px;
   /* border-radius:150px; */
 }
 .rentBody:hover {
@@ -66,25 +55,13 @@
 }
 
 .rentIcon {
-  color: #0f2027; /* fallback for old browsers */
-  color: -webkit-linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  color: linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-left: 50px;
 }
 .communityBody {
   border: 1px solid black;
   box-shadow: 0 0 10px 0;
   padding: 40px;
-  width: 200px;
+  width: 270px;
   /* border-radius:150px; */
 }
 .communityBody:hover {
@@ -96,26 +73,11 @@
   margin-top: 0;
 }
 
-.communityIcon {
-  color: #0f2027; /* fallback for old browsers */
-  color: -webkit-linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  color: linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 .manageBody {
   border: 1px solid black;
   box-shadow: 0 0 10px 0;
   padding: 40px;
-  width: 200px;
+  width: 270px;
 
   /* border-radius:150px; */
 }
@@ -130,18 +92,11 @@
   font-weight: bold;
 }
 
-.managaeIcon {
-  color: #0f2027; /* fallback for old browsers */
-  color: -webkit-linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  color: linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.manageIcon {
+  margin-left: 50px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }

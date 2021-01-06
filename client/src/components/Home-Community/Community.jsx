@@ -20,6 +20,7 @@ import StLouis from '../../Assests/st-louis.png';
 function HomeCommunity() {
   return (
     <>
+      <h1 className="CommunityHeader">Search your new community</h1>
       <img className="CommunityImage" src={WashingtonDC} alt="Washington DC" />
       <img className="CommunityImage" src={LosAngeles} alt="Los Angeles" />
       <img className="CommunityImage" src={StLouis} alt="St Louis" />

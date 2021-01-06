@@ -38,27 +38,51 @@ function ManagementHome() {
           </div>
         </div>
       </div>
-      <h2 id="HeadingTwo">Popular Services</h2>
+      <h2 className="HeadingTwo">Popular Services</h2>
       <div className="ManagementIcons">
-        <img className="Remodeling" src={Remodeling} alt="Remodeling" />
+        <div className="RemodelingMain">
+          <img className="Remodeling" src={Remodeling} alt="Remodeling" />
+          <h3>Remodeling</h3>
+        </div>
         <hr></hr>
-        <img className="Plumbing" src={Plumbing} alt="Plumbing" />
+        <div className="PlumbingMain">
+          <img className="Plumbing" src={Plumbing} alt="Plumbing" />
+          <h3>Plumbing</h3>
+        </div>
         <hr></hr>
-        <img className="Roofing" src={Roofing} alt="Roofing" />
+        <div className="RoofingMain">
+          <img className="Roofing" src={Roofing} alt="Roofing" />
+          <h3>Roofing</h3>
+        </div>
         <hr></hr>
-        <img className="Landscaping" src={Landscaping} alt="Landscaping" />
+        <div className="LandscapingMain">
+          <img className="Landscaping" src={Landscaping} alt="Landscaping" />
+          <h3>Landscaping</h3>
+        </div>
         <hr></hr>
-        <img className="Electrical" src={Electrical} alt="Electrical" />
+        <div className="ElectricalMain">
+          <img className="Electrical" src={Electrical} alt="Electrical" />
+          <h3>Electrical</h3>
+        </div>
         <hr></hr>
-        <img className="HeatingAC" src={HeatingAC} alt="Heating and AC" />
+        <div className="HeatingACMain">
+          <img className="HeatingAC" src={HeatingAC} alt="Heating and AC" />
+          <h3>Heating & AC</h3>
+        </div>
         <hr></hr>
-        <img className="Painting" src={Painting} alt="Painting" />
+        <div className="PaintingMain">
+          <img className="Painting" src={Painting} alt="Painting" />
+          <h3>Painting</h3>
+        </div>
         <hr></hr>
-        <img
-          className="Housecleaning"
-          src={Housecleaning}
-          alt="House Cleaning"
-        />
+        <div className="HousecleaningMain">
+          <img
+            className="Housecleaning"
+            src={Housecleaning}
+            alt="House Cleaning"
+          />
+          <h3>Housecleaning</h3>
+        </div>
       </div>
     </>
   );
