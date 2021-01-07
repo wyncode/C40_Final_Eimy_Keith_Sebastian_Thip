@@ -1,33 +1,53 @@
-img {
-  width: 165px;
-  flex-wrap: wrap;
-  padding: 5px;
-}
-
 .CommunityImage {
-  top: 250px;
-  left: -30%;
-  /* position: absolute; */
-  animation: move 11s linear 1s infinite;
-  width: 150px;
+  height: 250px;
+  width: auto;
 }
 
-@-webkit-keyframes move {
-  from {
-    left: -30%;
+.CommunityImages {
+  white-space: nowrap;
+  position: relative;
+  animation: slide 40s infinite;
+  overflow: visible;
+  animation-direction: alternate-reverse;
+}
+
+.CommunityImageSD {
+  height: 250px;
+  width: 300px;
+}
+
+.CommunityImageMN {
+  height: 250px;
+  width: 500px;
+}
+
+.CommunityImageLA {
+  height: 250px;
+  width: 422px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(30px);
   }
-  to {
-    left: 100%;
+  25% {
+    transform: translateX(-600px);
+  }
+  50% {
+    transform: translateX(-1000px);
+  }
+  75% {
+    transform: translateX(-1400px);
+  }
+  100% {
+    transform: translateX(-1850px);
   }
 }
 
-@-webkit-keyframes moveFirst {
-  from {
-    left: 50%;
-  }
-  to {
-    left: 100%;
-  }
+.CommunityImagesContainer {
+  width: 100vw;
+  overflow-x: hidden;
+  margin-bottom: 30px;
 }
 
 .CommunityHeader {

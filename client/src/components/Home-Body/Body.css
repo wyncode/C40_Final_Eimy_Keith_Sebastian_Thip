@@ -96,7 +96,28 @@
   margin-left: 50px;
 }
 
+img {
+  width: 165px;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
 p {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+}
+
+.BuyLink {
+  text-decoration: none;
+  color: #0f2027;
+}
+
+.RentLink {
+  text-decoration: none;
+  color: #0f2027;
+}
+
+.ManageLink {
+  text-decoration: none;
+  color: #0f2027;
 }

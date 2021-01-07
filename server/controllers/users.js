@@ -48,7 +48,7 @@ exports.loginUser = async (req, res) => {
       sameSite: 'Strict',
       secure: process.env.NODE_ENV !== 'production' ? false : true
     });
-    res.json(user);
+    res.json(users);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
   }
