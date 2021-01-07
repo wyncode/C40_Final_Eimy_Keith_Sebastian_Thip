@@ -24,12 +24,7 @@ function HomeBody() {
             </div>
             <div className="rentContent">Rent</div>
           </li>
-          {/* <li className="communityBody">
-            <div className="communityIcon">
-              <FontAwesomeIcon icon={faUsers} size="10x" />
-            </div>
-            <div className="communityContent">Community</div>
-          </li> */}
+          
           <li className="manageBody">
             <div className="manageIcon">
               <FontAwesomeIcon icon={faTools} size="10x" />
