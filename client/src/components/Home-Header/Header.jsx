@@ -129,7 +129,6 @@ function Header() {
             </div>
           </div>
         </div>
-        {/* <input className='FirstSearchBar' placeholder="Search"></input> */}
       </div>
     </>
   );
