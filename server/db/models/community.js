@@ -1,4 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'),
+  Listing = require('./listing'),
+  Review = require('./review');
 
 const communitySchema = new mongoose.Schema(
   {
@@ -37,18 +39,27 @@ const communitySchema = new mongoose.Schema(
       {
         type: Object
       }
-    ],
-    reviews: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Review'
-      }
     ]
   },
   {
     timestamps: true
   }
 );
+
+/**
+ * Create a virtual relation between community and listing; community and review.
+ */
+communitySchema.virtual('listings', {
+  ref: Listing,
+  localField: '_id',
+  foreignField: 'location'
+});
+
+communitySchema.virtual('reviews', {
+  ref: Review,
+  localField: '_id',
+  foreignField: 'communityId'
+});
 
 const Community = mongoose.model('Community', communitySchema);
 

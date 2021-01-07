@@ -19,6 +19,7 @@ app.use(morgan('dev'));
 
 // Unauthenticated routes
 app.use('/api/communities', openRoutes);
+
 app.use(openRoutesTwo);
 app.use(openRoutesThree);
 app.use(APIsRoutes);
@@ -35,6 +36,10 @@ app.use(APIsRoutes);
 //   } catch (e) {
 //     console.log(e)
 //   }
+
+app.use('/api/listings', openRoutesTwo);
+app.use('/api/users', openRoutesThree);
+
 
 // Serve any static files
 if (process.env.NODE_ENV === 'production') {

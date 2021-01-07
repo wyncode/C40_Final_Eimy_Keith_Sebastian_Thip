@@ -1,11 +1,11 @@
-const User = require('../db/models/user');
-(cloudinary = require('cloudinary').v2),
-  (jwt = require('jsonwebtoken')),
-  ({
+const User = require('../db/models/user'),
+  cloudinary = require('cloudinary').v2,
+  jwt = require('jsonwebtoken'),
+  {
     sendWelcomeEmail,
     sendCancellationEmail,
     forgotPasswordEmail
-  } = require('../emails/'));
+  } = require('../emails/');
 
 exports.fetchAllUsers = async (req, res) => {
   try {
@@ -113,7 +113,7 @@ exports.updateCurrentUser = async (req, res) => {
 exports.logoutUser = async (req, res) => {
   try {
     req.user.tokens = req.user.tokens.filter((token) => {
-      return token.token !== req.cookies.jwt;
+      return token.token !== req.headers.authorization;
     });
     await req.user.save();
     res.clearCookie('jwt');
