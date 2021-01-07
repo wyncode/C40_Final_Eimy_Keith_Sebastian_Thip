@@ -23,19 +23,7 @@ app.use('/api/communities', openRoutes);
 app.use(openRoutesTwo);
 app.use(openRoutesThree);
 app.use(APIsRoutes);
-// const getYelpAPI = async () => {
-//   return (axios.get('https://api.yelp.com/v3/businesses/search?location="miami"&term="lunch"', { headers: { Authorization: `Bearer ${process.env.YELP_API_KEY}` } })
-//   )
-// }
 
-// app.get('/api/yelp', async (request, response) => {
-//   try {
-//     const resp = getYelpAPI();
-//     response.json(resp.data);
-//     console.log(resp.data)
-//   } catch (e) {
-//     console.log(e)
-//   }
 
 app.use('/api/listings', openRoutesTwo);
 app.use('/api/users', openRoutesThree);
