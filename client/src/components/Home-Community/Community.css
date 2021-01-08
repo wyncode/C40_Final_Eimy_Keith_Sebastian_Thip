@@ -1,5 +1,58 @@
-img {
-  width: 165px;
-  flex-wrap: wrap;
-  padding: 5px;
+.CommunityImage {
+  height: 250px;
+  width: auto;
+}
+
+.CommunityImages {
+  white-space: nowrap;
+  position: relative;
+  animation: slide 40s infinite;
+  overflow: visible;
+  animation-direction: alternate-reverse;
+}
+
+.CommunityImageSD {
+  height: 250px;
+  width: 300px;
+}
+
+.CommunityImageMN {
+  height: 250px;
+  width: 500px;
+}
+
+.CommunityImageLA {
+  height: 250px;
+  width: 422px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(30px);
+  }
+  25% {
+    transform: translateX(-600px);
+  }
+  50% {
+    transform: translateX(-1000px);
+  }
+  75% {
+    transform: translateX(-1400px);
+  }
+  100% {
+    transform: translateX(-1850px);
+  }
+}
+
+.CommunityImagesContainer {
+  width: 100vw;
+  overflow-x: hidden;
+  margin-bottom: 30px;
+}
+
+.CommunityHeader {
+  text-align: center;
+  color: #0f2027;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }

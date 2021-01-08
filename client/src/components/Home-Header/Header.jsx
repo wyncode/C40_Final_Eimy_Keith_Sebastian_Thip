@@ -1,11 +1,64 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import GoogleMapReact from 'google-map-react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { AppContext } from '../../context/AppContext';
+import { useHistory } from 'react-router-dom';
+
+//add logic to see whichh one is active and depending on which one is active, do a history.push
 
 function Header() {
+  const [buyStatus, setBuyStatus] = useState('active');
+  const [rentStatus, setRentStatus] = useState('');
+  const [communityStatus, setCommunityStatus] = useState('');
+  const [manageStatus, setManageStatus] = useState('');
+  const { setContextSearch, contextSearch } = useContext(AppContext);
+  const history = useHistory();
+
+  const buyClick = (event) => {
+    setBuyStatus('active');
+    setRentStatus('');
+    setCommunityStatus('');
+    setManageStatus('');
+  };
+
+  const rentClick = (event) => {
+    setBuyStatus('');
+    setRentStatus('active');
+    setCommunityStatus('');
+    setManageStatus('');
+  };
+
+  const communityClick = (event) => {
+    setBuyStatus('');
+    setRentStatus('');
+    setCommunityStatus('active');
+    setManageStatus('');
+  };
+
+  const manageClick = (event) => {
+    setBuyStatus('');
+    setRentStatus('');
+    setCommunityStatus('');
+    setManageStatus('active');
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (buyStatus === 'active') history.push('/buy');
+    else if (rentStatus === 'active') history.push('/rent');
+    else if (communityStatus === 'active') history.push('/community');
+    else if (manageStatus === 'active') history.push('/manage');
+    //edit line 53 to go to the other page rather than the home manage page.
+  };
+
+  const handleChange = (event) => {
+    setContextSearch(event.target.value);
+    console.log(event.target.value);
+  };
+
   return (
     <>
       <section className="container2">
@@ -17,99 +70,40 @@ function Header() {
           </h3>
         </div>
       </section>
-      {/* <div className="container position-relative mt-n6 z-index-20">
-        <ul className="nav nav-tabs search-bar-nav-tabs" role="tablist">
-          <li className="nav-item mr-2"><a className="nav-link active" href="#buy" data-toggle="tab" role="tab" aria-selected="true">Buy</a></li>
-          <li className="nav-item mr-2"><a className="nav-link" href="#rent" data-toggle="tab" role="tab" aria-selected="false">Rent</a></li>
-          <li className="nav-item"><a className="nav-link" href="#sell" data-toggle="tab" role="tab" aria-selected="false">Sell</a></li>
-        </ul>
-        <div className="search-bar search-bar-with-tabs p-3 p-lg-4">
-          <div className="tab-content">
-            <div className="tab-pane fade active show" id="buy" role="tabpanel">
-              <form action="#">
-                <div className="row">
-                  <div className="col-lg-4 d-flex align-items-center form-group no-divider">
-                    <div className="dropdown show-tick form-control"><select className="selectpicker form-control" title="Location" data-style="btn-form-control" multiple="" data-selected-text-format="count > 2">
-
-                    </select><button type="button" tabindex="-1" className="btn dropdown-toggle btn-form-control bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" title="Location"><div className="filter-option"><div className="filter-option-inner"><div className="filter-option-inner-inner">Location</div></div> </div></button><div className="dropdown-menu "><div className="inner show" role="listbox" id="bs-select-1" tabindex="-1" aria-multiselectable="true"><ul className="dropdown-menu inner show" role="presentation"></ul></div></div></div>
-                  </div>
-                  <div className="col-md-6 col-lg-3 d-flex align-items-center form-group no-divider">
-                    <div className="dropdown show-tick"><button type="button" tabindex="-1" className="btn dropdown-toggle btn-form-control bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox" aria-expanded="false" title="Type"><div className="filter-option"><div className="filter-option-inner"><div className="filter-option-inner-inner">Type</div></div> </div></button><div className="dropdown-menu "><div className="inner show" role="listbox" id="bs-select-2" tabindex="-1" aria-multiselectable="true"><ul className="dropdown-menu inner show" role="presentation"></ul></div></div></div>
-                  </div>
-                  <div className="col-md-6 col-lg-3 d-flex align-items-center form-group no-divider">
-                    <div className="dropdown"><button type="button" tabindex="-1" className="btn dropdown-toggle btn-form-control bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-3" aria-haspopup="listbox" aria-expanded="false" title="Max price"><div className="filter-option"><div className="filter-option-inner"><div className="filter-option-inner-inner">Max price</div></div> </div></button><div className="dropdown-menu "><div className="inner show" role="listbox" id="bs-select-3" tabindex="-1"><ul className="dropdown-menu inner show" role="presentation"></ul></div></div></div>
-                  </div>
-                  <div className="col-lg-2 form-group mb-0">
-                    <button className="btn btn-primary btn-block h-100" type="submit">Search </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div className="tab-pane fade" id="rent" role="tabpanel">
-              <form action="#">
-                <div className="row">
-
-                  <div className="col-lg-2 form-group mb-0">
-                    <button className="btn btn-primary btn-block h-100" type="submit">Search </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div className="tab-pane fade" id="sell" role="tabpanel">
-              <form action="#">
-                <div className="row">
-
-                  <div className="col-lg-2 form-group mb-0">
-                    <button className="btn btn-primary btn-block h-100" type="submit">Search </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <div className="HeaderSearchTab">
         <ul className="nav nav-tabs search-bar-nav-tabs" role="tablist">
           <li className="nav-item diff">
             <a
-              className="nav-link active"
-              href="#buy"
-              data-toggle="tab"
+              className={`nav-link ${buyStatus}`}
               role="tab"
-              aria-selected="true"
+              onClick={() => buyClick()}
             >
               Buy
             </a>
           </li>
           <li className="nav-item diff">
             <a
-              className="nav-link"
-              href="#rent"
-              data-toggle="tab"
+              className={`nav-link ${rentStatus}`}
               role="tab"
-              aria-selected="false"
+              onClick={rentClick}
             >
               Rent
             </a>
           </li>
           <li className="nav-item diff">
             <a
-              className="nav-link"
-              href="#Community"
-              data-toggle="tab"
+              className={`nav-link ${communityStatus}`}
               role="tab"
-              aria-selected="false"
+              onClick={communityClick}
             >
               Community
             </a>
           </li>
           <li className="nav-item">
             <a
-              className="nav-link"
-              href="#Manage"
-              data-toggle="tab"
+              className={`nav-link ${manageStatus}`}
               role="tab"
-              aria-selected="false"
+              onClick={manageClick}
             >
               Manage
             </a>
@@ -118,14 +112,19 @@ function Header() {
         <div className="search-bar search-bar-with-tabs">
           <div className="tab-content">
             <div className="tab-pane fade active show" role="tabpanel">
-              <input className="FirstSearchBar"></input>
-              <button className="FirstSearchBarSearchButton" type="Search">
-                <FontAwesomeIcon
-                  className="SearchIcon"
-                  icon={faSearch}
-                  size="4x"
-                />
-              </button>
+              <form onSubmit={handleSubmit}>
+                <input
+                  onChange={handleChange}
+                  className="FirstSearchBar"
+                ></input>
+                <button className="FirstSearchBarSearchButton" type="Submit">
+                  <FontAwesomeIcon
+                    className="SearchIcon"
+                    icon={faSearch}
+                    size="4x"
+                  />
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -135,3 +134,6 @@ function Header() {
 }
 
 export default Header;
+
+//wrap input around form component & on the form component, have an on submit event.
+//set it equal to your own handlesubmit function.

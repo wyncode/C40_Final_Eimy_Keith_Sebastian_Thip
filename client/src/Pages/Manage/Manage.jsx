@@ -1,11 +1,13 @@
 import React from 'react';
 import './Manage.css';
+import ManagementHome from '../../components/Management-Home/Management';
 
 function Manage() {
   return (
-    <div className="manage">
-      <h1>Manage Page</h1>
-    </div>
+    <>
+      <div className="manage"></div>
+      <ManagementHome />
+    </>
   );
 }
 

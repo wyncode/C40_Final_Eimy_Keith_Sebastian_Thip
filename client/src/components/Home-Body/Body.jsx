@@ -1,10 +1,9 @@
 import React from 'react';
 import './Body.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { faTruckMoving } from '@fortawesome/free-solid-svg-icons';
-import { faUsers } from '@fortawesome/free-solid-svg-icons';
-import { faTools } from '@fortawesome/free-solid-svg-icons';
+import BuyIcon from '../../Assests/buyIcon.png';
+import RentIcon from '../../Assests/rentIcon.png';
+import ManageIcon from '../../Assests/manageIcon.png';
+import { Link } from 'react-router-dom';
 
 function HomeBody() {
   return (
@@ -12,24 +11,43 @@ function HomeBody() {
       <div className="body">
         <ul>
           <li className="buyBody">
-            <div className="buyIcon">
-              <FontAwesomeIcon icon={faHome} size="10x" />
-            </div>
-
-            <div className="buyContent">Buy</div>
+            <Link to="/buy" className="BuyLink">
+              <div className="buyIcon">
+                <img src={BuyIcon} alt="Buy Icon"></img>
+              </div>
+              <div className="buyContent">Buy</div>
+              <p>
+                Achieve an immersive experience through many listings that we
+                have available. Make any house become a place you will want to
+                call home.{' '}
+              </p>
+            </Link>
           </li>
           <li className="rentBody">
-            <div className="rentIcon">
-              <FontAwesomeIcon icon={faTruckMoving} size="10x" />
-            </div>
-            <div className="rentContent">Rent</div>
+            <Link to="/rent" className="RentLink">
+              <div className="rentIcon">
+                <img src={RentIcon} alt="Rent Icon"></img>
+              </div>
+              <div className="rentContent">Rent</div>
+              <p>
+                Just as important as buying, find the right place to rent that
+                exceeds your standards.. a place that you also would want to
+                call home.
+              </p>
+            </Link>
           </li>
-          
           <li className="manageBody">
-            <div className="manageIcon">
-              <FontAwesomeIcon icon={faTools} size="10x" />
-            </div>
-            <div className="manageContent">Manage</div>
+            <Link to="/manage" className="ManageLink">
+              <div className="manageIcon">
+                <img src={ManageIcon} alt="Manage Icon"></img>
+              </div>
+              <div className="manageContent">Manage</div>
+              <p>
+                Purchasing a home doesn't just stop there. Your home is a place
+                that you want to nourish and we have just the right experts to
+                assist you.
+              </p>
+            </Link>
           </li>
         </ul>
       </div>

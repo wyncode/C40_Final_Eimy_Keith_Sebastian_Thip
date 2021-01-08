@@ -20,21 +20,40 @@ import StLouis from '../../Assests/st-louis.png';
 function HomeCommunity() {
   return (
     <>
-      <img src={WashingtonDC} alt="Washington DC" />
-      <img src={LosAngeles} alt="Los Angeles" />
-      <img src={StLouis} alt="St Louis" />
-      <img src={NewOrleans} alt="New Orleans" />
-      <img src={Miami} alt="Miami" />
-      <img src={Boston} alt="Boston" />
-      <img src={Atlanta} alt="Atlanta" />
-      <img src={SanFrancisco} alt="San Francisco" />
-      <img src={SanDiego} alt="San Diego" />
-      <img src={LasVegas} alt="Las Vegas" />
-      <img src={Minneapolis} alt="Minneapolis" />
-      <img src={Chicago} alt="Chicago" />
-      <img src={Denver} alt="Denver" />
-      <img src={Hollywood} alt="Hollywood" />
-      <img src={NewYork} alt="New York" />
+      <h1 className="CommunityHeader">Search your new community</h1>
+      <div className="CommunityImagesContainer">
+        <div className="CommunityImages">
+          <img
+            className="CommunityImage"
+            src={WashingtonDC}
+            alt="Washington DC"
+          />
+          <img className="CommunityImage" src={LosAngeles} alt="Los Angeles" />
+          <img className="CommunityImage" src={StLouis} alt="St Louis" />
+          <img className="CommunityImage" src={NewOrleans} alt="New Orleans" />
+          <img className="CommunityImage" src={Miami} alt="Miami" />
+          <img className="CommunityImage" src={Boston} alt="Boston" />
+          <img className="CommunityImage" src={Atlanta} alt="Atlanta" />
+          <img
+            className="CommunityImage"
+            src={SanFrancisco}
+            alt="San Francisco"
+          />
+        </div>
+        <div className="CommunityImages">
+          <img className="CommunityImageSD" src={SanDiego} alt="San Diego" />
+          <img className="CommunityImage" src={LasVegas} alt="Las Vegas" />
+          <img
+            className="CommunityImageMN"
+            src={Minneapolis}
+            alt="Minneapolis"
+          />
+          <img className="CommunityImage" src={Chicago} alt="Chicago" />
+          <img className="CommunityImage" src={Denver} alt="Denver" />
+          <img className="CommunityImageLA" src={Hollywood} alt="Hollywood" />
+          <img className="CommunityImage" src={NewYork} alt="New York" />
+        </div>
+      </div>
     </>
   );
 }
