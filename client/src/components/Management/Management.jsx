@@ -4,7 +4,7 @@ import { AppContext } from '../../context/AppContext';
 
 const Management = () => {
   const [managementResult, setManagementResult] = useState(null);
-  const { setContextSearch, contextSearch } = useContext(AppContext);
+  const { contextSearch, setContextSearch } = useContext(AppContext);
 
   useEffect(async () => {
     const response = await axios.get(

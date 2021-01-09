@@ -18,8 +18,6 @@ import ScrollToTop from './components/ScrollToTop';
 import { AppContextProvider } from './context/AppContext';
 
 const App = () => {
-  const [serverMessage, setServerMessage] = useState('');
-
   return (
     <div className="App">
       <AppContextProvider>

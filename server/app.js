@@ -24,10 +24,8 @@ app.use(openRoutesTwo);
 app.use(openRoutesThree);
 app.use(APIsRoutes);
 
-
 app.use('/api/listings', openRoutesTwo);
 app.use('/api/users', openRoutesThree);
-
 
 // Serve any static files
 if (process.env.NODE_ENV === 'production') {

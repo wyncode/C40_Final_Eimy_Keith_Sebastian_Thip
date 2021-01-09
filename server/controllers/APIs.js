@@ -26,6 +26,19 @@ exports.searchYelpAPI = async (request, response) => {
   }
 };
 
+//Shools API
+exports.searchSchoolsAPI = async (request, response) => {
+  try {
+    const { term } = request.query;
+    const data = await axios.get(
+      `https://api.greatschools.org/schools/nearby?key=${process.env.GREAT_SCHOOLS_API_KEY}&city=${term}&state=FL`
+    );
+    response.send(data.data);
+  } catch (e) {
+    console.log(e);
+  }
+};
+
 //Ciceros API
 
 // exports.getRepByZipcode = async (req, res) => {
