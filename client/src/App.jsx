@@ -13,6 +13,7 @@ import Manage from './Pages/Manage/Manage';
 import Community from './Pages/Community/Community';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
+import ManageResults from './Pages/ManageResults/ManageResults';
 import { FooterContainer } from './components/Containers/footer';
 import ScrollToTop from './components/ScrollToTop';
 import { AppContextProvider } from './context/AppContext';
@@ -33,6 +34,7 @@ const App = () => {
               <Route exact path="/signin" component={SignIn} />
               <Route exact path="/about" component={About} />
               <Route exact path="/contact" component={Contact} />
+              <Route exact path="/manageResults" component={ManageResults} />
             </Switch>
             <Footer />
           </ScrollToTop>

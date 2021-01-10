@@ -8,6 +8,7 @@ import HeatingAC from '../../Assests/heating-ac.png';
 import Painting from '../../Assests//painting.png';
 import Housecleaning from '../../Assests/housecleaning.png';
 import Marker from '../../Assests/marker.png';
+import { Link } from 'react-router-dom';
 
 function ManagementHome() {
   return (
@@ -30,11 +31,13 @@ function ManagementHome() {
           <img className="Marker" src={Marker} alt="Location Marker"></img>
           <div className="MainZipSearchBar">
             <input className="ZipSearchBar" placeholder="Zip code"></input>
-            <input
-              className="SearchBarButton"
-              type="submit"
-              value="Find Pros"
-            ></input>
+            <Link to="/manageResults">
+              <input
+                className="SearchBarButton"
+                type="submit"
+                value="Find Pros"
+              ></input>
+            </Link>
           </div>
         </div>
       </div>
