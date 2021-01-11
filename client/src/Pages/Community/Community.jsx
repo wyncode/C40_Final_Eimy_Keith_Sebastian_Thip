@@ -3,6 +3,7 @@ import './Community.css';
 import axios from 'axios';
 import MyMapComponent from '../../components/GoogleMap/GoogleMap';
 import Schools from '../../components/School/School';
+import Realtor from '../../components/Realtor/Realtor';
 import Reps from '../../components/Cicero/Cicero';
 function Community() {
   const [mapKey, setMapKey] = useState();
@@ -20,6 +21,7 @@ function Community() {
       </div>
       <MyMapComponent mapKey={mapKey} />
       <Schools></Schools>
+      <Realtor></Realtor>
       <Reps />
     </>
   );

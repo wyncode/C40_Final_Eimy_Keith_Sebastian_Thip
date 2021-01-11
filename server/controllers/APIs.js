@@ -39,6 +39,20 @@ exports.searchSchoolsAPI = async (request, response) => {
   }
 };
 
+//Realtor API
+exports.searchRealtorAPI = async (request, response) => {
+  try {
+    const { term } = request.query;
+    const data = await axios.get(
+      // `https://rapidapi.com/apidojo/api/realtor?endpoint=${process.env.REALTOR_API_KEY}`
+      'https://realtor.p.rapidapi.com/properties/v2/list-for-sale?endpoint=${process.env.REALTOR_API_KEY}&city=Edgewater&limit=200&offset=0&state_code=FL'
+    );
+    response.send(data.data);
+  } catch (e) {
+    console.log(e);
+  }
+};
+
 //Ciceros API
 
 exports.getRepByAPI = async (req, res) => {

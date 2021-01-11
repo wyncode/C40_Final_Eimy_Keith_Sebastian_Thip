@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { AppContext } from '../../context/AppContext';
 //Second Try
 import GoogleMapReact from 'google-map-react';
 import axios from 'axios';
@@ -16,6 +16,7 @@ const AnyReactComponent = ({ text }) => (
 );
 
 class SimpleMap extends Component {
+  static contextType = AppContext;
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,11 +28,12 @@ class SimpleMap extends Component {
       lat: 25.7617,
       lng: -80.1918
     },
-    zoom: 12
+    zoom: 16
   };
   async handleSubmit(event) {
     event.preventDefault();
     const { data } = await axios.get(`api/search?location=${this.state.value}`);
+
     console.log(event.target.value);
     console.log(data);
     this.setState({ locations: data });
@@ -68,13 +70,14 @@ class SimpleMap extends Component {
                   !this.state.locations
                     ? this.props.center
                     : {
-                        lat: this.state.locations[0].coordinates.latitude,
-                        lng: this.state.locations[0].coordinates.longitude
+                        lalat: this.state.locations[0].coordinates.latitude,
+                        lnlng: this.state.locations[0].coordinates.longitude
                       }
                 }
               >
-                {this.state.locations &&
-                  this.state.locations.map((location) => {
+                {
+                  // this.state.locations &&
+                  this.context?.contextSearch?.locations?.map((location) => {
                     console.log(location);
                     return (
                       <AnyReactComponent
@@ -83,7 +86,8 @@ class SimpleMap extends Component {
                         text={location.name}
                       />
                     );
-                  })}
+                  })
+                }
               </GoogleMapReact>
             )}
           </div>

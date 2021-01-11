@@ -61,9 +61,7 @@ const Reps = ({ history }) => {
       <div>
         <form className="form-container" name="city" onSubmit={handleAddress}>
           <div className="TopBar">
-            <h2>
-              Your <span>REPS</span>
-            </h2>
+            <h2>Your Reps</h2>
             <div className="search-container">
               <input
                 type="text"

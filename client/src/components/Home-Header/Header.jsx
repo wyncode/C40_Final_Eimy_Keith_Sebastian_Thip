@@ -53,9 +53,8 @@ function Header() {
     else if (communityStatus === 'active') history.push('/community');
     else if (manageStatus === 'active') history.push('/manage');
     //edit line 53 to go to the other page rather than the home manage page.
-    const { data } = await axios.get(
-      `api/search?location=${event.target.value}`
-    );
+    console.log(event.target.value);
+    const { data } = await axios.get(`api/search?location=${contextSearch}`);
     console.log(event.target.value);
     console.log(data);
     setContextSearch({ locations: data });

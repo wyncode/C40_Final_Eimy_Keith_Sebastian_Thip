@@ -2,7 +2,8 @@ const router = require('express').Router(),
   {
     getYelpAPI,
     searchYelpAPI,
-    searchSchoolsAPI
+    searchSchoolsAPI,
+    searchRealtorAPI
   } = require('../../controllers/APIs'),
   { getRepByAPI } = require('../../controllers/APIs');
 
@@ -13,6 +14,9 @@ router.get('/api/search', searchYelpAPI);
 
 //Schools API
 router.get('/api/schools', searchSchoolsAPI);
+
+//Realtor API
+router.get('/api/realtor', searchRealtorAPI);
 
 // Ciceros API
 
