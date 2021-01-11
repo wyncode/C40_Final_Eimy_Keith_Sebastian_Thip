@@ -1,0 +1,126 @@
+.main-card-body {
+  display: flex;
+  flex-direction: row;
+  display: grid;
+}
+
+.card-body {
+  display: block;
+  border: 1px solid black;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 20px;
+  width: 200px;
+  height: 330px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.2;
+  overflow: hidden;
+  position: relative;
+  min-height: calc(48px);
+}
+
+.school-card-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.school-type {
+  color: rgb(134, 144, 153);
+  font-size: 20px;
+  line-height: 1.33;
+  max-height: calc(31.92px);
+  overflow: hidden;
+  position: relative;
+}
+
+.school-type-two {
+  color: rgb(134, 144, 153);
+  font-size: 20px;
+  line-height: 1.33;
+  max-height: calc(31.92px);
+  overflow: hidden;
+  position: relative;
+  margin-left: 10px;
+}
+
+.school-type-info li {
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+}
+
+.school-type-info div {
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+}
+
+.school-rating {
+  border-radius: 200px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  display: flex;
+  overflow: hidden;
+  background-color: rgb(32, 64, 82);
+  color: rgb(255, 255, 255);
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  margin-left: 25px;
+}
+
+.rating-one {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.school-parentrating {
+  border-radius: 200px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  display: flex;
+  overflow: hidden;
+  background-color: rgb(91, 97, 100);
+  color: rgb(255, 255, 255);
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.card-contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.school-contact-info {
+  font-weight: bold;
+  font-size: 17px;
+  text-align: left;
+  margin-left: -20px;
+}
+
+.extra-info {
+  font-size: 13px;
+}
+
+.school-rating-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

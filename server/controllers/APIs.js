@@ -39,6 +39,36 @@ exports.searchSchoolsAPI = async (request, response) => {
   }
 };
 
+//Realtor API
+exports.searchRealtorAPI = async (request, response) => {
+  try {
+    const { term } = request.query;
+    const data = await axios.get(
+      `https://rapidapi.com/apidojo/api/realtor?endpoint=${process.env.REALTOR_API_KEY}`
+    );
+    response.send(data.data);
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+// //Crime API
+
+// exports.searchCrimeAPI = async (request, response) => {
+//   try {
+//     const { term } = request.query;
+//     const data = await axios.get(
+//       `https: ?`
+//     );
+// `https: ?`);
+//     response.send(data.data);
+//   } catch (e) {
+//     response.send(data.data);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// };
+
 //Ciceros API
 
 // exports.getRepByZipcode = async (req, res) => {
