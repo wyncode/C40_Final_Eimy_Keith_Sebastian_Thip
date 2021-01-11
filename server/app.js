@@ -7,7 +7,9 @@ const express = require('express'),
   userRouterTwo = require('./routes/secure/reviews'),
   openRoutes = require('./routes/open/communities'),
   openRoutesTwo = require('./routes/open/listings'),
-  openRoutesThree = require('./routes/open/users');
+  openRoutesThree = require('./routes/open/users'),
+  APIsRoutes = require('./routes/open/APIs');
+axios = require('axios');
 
 const app = express();
 
@@ -17,6 +19,11 @@ app.use(morgan('dev'));
 
 // Unauthenticated routes
 app.use('/api/communities', openRoutes);
+
+app.use(openRoutesTwo);
+app.use(openRoutesThree);
+app.use(APIsRoutes);
+
 app.use('/api/listings', openRoutesTwo);
 app.use('/api/users', openRoutesThree);
 

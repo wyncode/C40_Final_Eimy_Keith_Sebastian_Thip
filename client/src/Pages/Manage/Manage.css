@@ -1,0 +1,181 @@
+.manage {
+  margin-top: 0;
+}
+
+.containerManagement {
+  position: relative;
+  text-align: center;
+  height: 90vh;
+  background-image: url('../../Assests/management.jpeg');
+
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding-top: 200px;
+}
+
+.ManagementHeaderHeading {
+  margin-top: -15rem;
+}
+
+.ManagementHeader {
+  font-size: 3.5rem;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5 rem;
+  line-height: 1.3;
+}
+
+.ManagementSubHeader {
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5 rem;
+  line-height: 1.3;
+  margin-left: -10px;
+}
+
+.SearchBar {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  margin-top: 20px;
+  width: 450px;
+  margin-right: 15px;
+}
+
+.ZipSearchBar {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  width: 100px;
+  margin-left: -10px;
+}
+
+.ZipSearchBar:focus {
+  outline: none;
+}
+
+.SearchBar:focus {
+  outline: none;
+}
+
+.SearchBarButton {
+  padding: 20px;
+  font-size: 20px;
+  background-color: orange;
+  border: none;
+  margin-top: 20px;
+}
+
+.SearchBarButton:focus {
+  outline: none;
+}
+
+.SearchBarButton:hover {
+  cursor: pointer;
+}
+
+.ManagementSearch {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+hr {
+  color: lightgray;
+  height: 37px;
+  margin-left: -20px;
+  margin-top: 32px;
+}
+
+.Marker {
+  background-color: white;
+  margin-top: 20px;
+  height: 44px;
+  width: 42px;
+  padding: 10px;
+}
+
+.HeadingTwo {
+  font-weight: 2;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 27px;
+  color: #212527;
+}
+
+.ManagementIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.Remodeling {
+  height: 80px;
+  width: 95px;
+  margin-left: 20px;
+  justify-content: center;
+}
+
+.Plumbing {
+  height: 80px;
+  width: 95px;
+  justify-content: center;
+}
+
+.Roofing {
+  height: 80px;
+  width: 95px;
+  justify-content: center;
+}
+
+.Landscaping {
+  height: 80px;
+  width: 95px;
+  margin-left: 20px;
+  justify-content: center;
+}
+
+.Electrical {
+  height: 80px;
+  width: 95px;
+  justify-content: center;
+}
+
+.HeatingAC {
+  height: 80px;
+  width: 95px;
+  margin-left: 20px;
+  justify-content: center;
+}
+
+.Painting {
+  height: 80px;
+  width: 95px;
+  justify-content: center;
+}
+
+.Housecleaning {
+  height: 80px;
+  width: 95px;
+  margin-left: 30px;
+  justify-content: center;
+}
+
+h3 {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 5;
+}

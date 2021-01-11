@@ -1,6 +1,5 @@
 import React from 'react';
 import './Navbar.css';
-
 import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -42,7 +41,6 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-
         <ul>
           <li>
             <Link

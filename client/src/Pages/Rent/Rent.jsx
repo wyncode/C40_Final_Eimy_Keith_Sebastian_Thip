@@ -3,7 +3,7 @@ import './Rent.css';
 
 function Rent() {
   return (
-    <div>
+    <div className="rent">
       <h1>Rent Page</h1>
     </div>
   );

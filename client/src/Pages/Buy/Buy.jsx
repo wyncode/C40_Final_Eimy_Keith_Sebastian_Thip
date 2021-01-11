@@ -3,7 +3,7 @@ import './Buy.css';
 
 function Buy() {
   return (
-    <div>
+    <div className="buy">
       <h1>Buy Page</h1>
     </div>
   );
