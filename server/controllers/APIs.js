@@ -52,7 +52,6 @@ exports.searchRealtorAPI = async (request, response) => {
   }
 };
 
-<<<<<<< HEAD
 // //Crime API
 
 // exports.searchCrimeAPI = async (request, response) => {
@@ -70,8 +69,6 @@ exports.searchRealtorAPI = async (request, response) => {
 //   }
 // };
 
-=======
->>>>>>> origin/sebastian/enhancement-12-cicero-api
 //Ciceros API
 
 exports.getRepByAPI = async (req, res) => {

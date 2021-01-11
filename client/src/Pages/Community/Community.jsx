@@ -101,10 +101,6 @@ function Community() {
       {/* <BootstrapCarousel></BootstrapCarousel> */}
       <Schools></Schools>
       <Realtor></Realtor>
-<<<<<<< HEAD
-=======
-      <Reps />
->>>>>>> origin/sebastian/enhancement-12-cicero-api
     </>
   );
 }
