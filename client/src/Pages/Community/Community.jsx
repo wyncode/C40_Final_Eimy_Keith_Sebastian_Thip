@@ -14,6 +14,7 @@ import StreetLights from '../../Assests/street-light.png';
 import Thumb from '../../Assests/thumbs.png';
 import Avatar from '../../Assests/avatar.png';
 // import BootstrapCarousel from '../../components/Bootstrap/Bootstrap';
+// import Reps from '../../components/Cicero/Cicero';
 
 function Community() {
   const [mapKey, setMapKey] = useState();
@@ -100,6 +101,10 @@ function Community() {
       {/* <BootstrapCarousel></BootstrapCarousel> */}
       <Schools></Schools>
       <Realtor></Realtor>
+<<<<<<< HEAD
+=======
+      <Reps />
+>>>>>>> origin/sebastian/enhancement-12-cicero-api
     </>
   );
 }

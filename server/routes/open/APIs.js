@@ -5,7 +5,7 @@ const router = require('express').Router(),
     searchSchoolsAPI,
     searchRealtorAPI
   } = require('../../controllers/APIs'),
-  { getRepByZipcode } = require('../../controllers/APIs');
+  { getRepByAPI } = require('../../controllers/APIs');
 
 //Yelp API
 router.get('/api/yelp', getYelpAPI);
@@ -19,7 +19,5 @@ router.get('/api/realtor', searchRealtorAPI);
 
 //Ciceros API
 
-// router.get('/representatives/', getRepByZipcode);
-// module.exports = router;
-
+router.get('api/reps/', getRepByAPI);
 module.exports = router;

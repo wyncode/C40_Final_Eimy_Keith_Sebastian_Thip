@@ -1,0 +1,263 @@
+.ManageResultsBody {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.ManagementMainContent {
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+.ManageResultsSearch {
+  margin-top: -100px;
+  display: flex;
+  justify-content: center;
+}
+
+.SearchBarManage {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  margin-top: 20px;
+  width: 450px;
+  margin-right: 15px;
+  background-color: rgb(241, 240, 240);
+}
+
+.ZipSearchBarManage {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  width: 100px;
+  margin-left: -10px;
+  background-color: rgb(241, 240, 240);
+}
+
+.Marker2 {
+  background-color: rgb(241, 240, 240);
+  margin-top: 20px;
+  height: 44px;
+  width: 42px;
+  padding: 10px;
+}
+
+.ManagementSearch2 {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.Filters {
+  border: 1px solid lightgrey;
+  margin-left: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  color: #2c5364;
+}
+
+.FiltersWord {
+  margin-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.FilterTopic {
+  margin-left: -53px;
+  font-size: 19px;
+  width: 200px;
+  margin-bottom: -15px;
+  font-weight: bold;
+}
+
+.FilterTopicBed {
+  margin-left: -4px;
+  font-size: 19px;
+  width: 200px;
+  margin-bottom: -15px;
+  font-weight: bold;
+}
+
+.FilterTopicBath {
+  margin-left: -1px;
+  font-size: 19px;
+  width: 200px;
+  margin-bottom: -15px;
+  font-weight: bold;
+}
+
+.FilterTopicClean {
+  margin-left: -38px;
+  font-size: 19px;
+  width: 200px;
+  margin-bottom: -15px;
+  font-weight: bold;
+}
+
+.FilterTopicExtra {
+  margin-left: -35px;
+  font-size: 19px;
+  width: 200px;
+  margin-bottom: -15px;
+  font-weight: bold;
+}
+
+.FilterTopicPets {
+  margin-left: -79px;
+  font-size: 19px;
+  width: 200px;
+  margin-bottom: -15px;
+  font-weight: bold;
+}
+
+.FilterBody {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.FilterBodyInput {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.FilterBodyInputLast {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: -40px;
+}
+
+.FiltersLabel {
+  margin-top: -19px;
+  margin-left: 20px;
+}
+
+.ProfileBody {
+  border: 1px solid lightgrey;
+  box-shadow: 1px 1px 1px 1px rgb(0.1, 0.1, 0.1, 0.1);
+  display: flex;
+  flex-direction: row;
+  margin-left: 160px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.ProfileImage {
+  height: 200px;
+  width: 150px;
+}
+
+.ProfileInfo {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20px;
+}
+
+.BusinessTitle {
+  margin-left: -108px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.BusinessTitleTwo {
+  margin-left: -207px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.BusinessTitleThree {
+  margin-left: -185px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.BusinessTitleFour {
+  margin-left: -125px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.Rating {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3px;
+}
+
+.RatingStar {
+  height: 15px;
+  width: 15px;
+  margin-left: -7px;
+}
+
+.RatingRate {
+  color: #0f2027;
+  padding-top: 1px;
+  padding-right: 7px;
+}
+
+.ProfileFeature {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: -10px;
+}
+
+.ProfileFeatureIcon {
+  width: 30px;
+  height: 30px;
+  margin-left: 23px;
+}
+
+.FeatureDescription {
+  width: 70px;
+  font-size: 12px;
+  margin-left: 7px;
+}
+
+.Hires {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+.HireLogo {
+  width: 40px;
+  height: 40px;
+}
+
+.HiresNumber {
+  padding-top: 13px;
+  padding-left: 3px;
+}
+
+.CostAmount {
+  font-weight: bold;
+  font-size: 17px;
+  padding-left: 50px;
+}
+
+.StartingCost {
+  font-size: 12px;
+}
+
+.ViewProfileButton {
+  margin-top: 123px;
+  padding: 7px;
+  width: 115px;
+}
+
+.ProfileInfoTwo {
+  margin-left: 30px;
+}
+
+.More {
+  color: grey;
+  padding-right: 160px;
+}
+
+.Reset {
+  color: grey;
+  padding-right: 153px;
+}

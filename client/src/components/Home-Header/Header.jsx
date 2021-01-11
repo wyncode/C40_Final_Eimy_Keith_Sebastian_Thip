@@ -14,7 +14,7 @@ function Header() {
   const [rentStatus, setRentStatus] = useState('');
   const [communityStatus, setCommunityStatus] = useState('');
   const [manageStatus, setManageStatus] = useState('');
-  const { setContextSearch, contextSearch } = useContext(AppContext);
+  const { contextSearch, setContextSearch } = useContext(AppContext);
   const history = useHistory();
 
   const buyClick = (event) => {
@@ -45,18 +45,27 @@ function Header() {
     setManageStatus('active');
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
     if (buyStatus === 'active') history.push('/buy');
     else if (rentStatus === 'active') history.push('/rent');
     else if (communityStatus === 'active') history.push('/community');
     else if (manageStatus === 'active') history.push('/manage');
     //edit line 53 to go to the other page rather than the home manage page.
+    console.log(event.target.value);
+    const { data } = await axios.get(`api/search?location=${contextSearch}`);
+    console.log(event.target.value);
+    console.log(data);
+    setContextSearch({ locations: data });
   };
 
   const handleChange = (event) => {
     setContextSearch(event.target.value);
     console.log(event.target.value);
+    // this.setState({
+    //   value: event.target.value
+    // });
   };
 
   return (
