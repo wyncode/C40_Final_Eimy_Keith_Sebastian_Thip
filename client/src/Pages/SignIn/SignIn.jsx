@@ -11,7 +11,7 @@ const SignIn = () => {
 
   const [checked, setChecked] = useState(false);
   const [toggle, setToggle] = useState('login');
-
+  const [form, setForm] = useState({});
   const logIn = () => {
     setToggle('login');
   };
@@ -24,6 +24,10 @@ const SignIn = () => {
     setChecked(!checked);
     console.log(checked);
   };
+  const handleChange = (event) => {
+    setForm({ ...form, [event.target.name]: event.target.value });
+  };
+  const handleLogin = () => {};
 
   return (
     <>
@@ -44,27 +48,33 @@ const SignIn = () => {
             <img src={gp} />
           </div>
           {toggle === 'login' && (
-            <form id="login" className="input-group">
+            <form id="login" className="input-group" onSubmit={handleLogin}>
               <label>Username</label>
               <input
                 type="text"
                 className="input-field"
                 placeholder="Username"
+                name="name"
                 required
+                onChange={handleChange}
               ></input>
               <label>Email</label>
               <input
                 type="email"
                 className="input-field"
                 placeholder="Email"
+                name="email"
                 required
+                onChange={handleChange}
               ></input>
               <label>Password</label>
               <input
                 type="text"
                 className="input-field"
+                name="password"
                 placeholder="Enter Password"
                 required
+                onChange={handleChange}
               ></input>
 
               <button type="submit" className="submit-btn">
@@ -80,6 +90,7 @@ const SignIn = () => {
                 className="input-field"
                 placeholder="Username"
                 required
+                onChange={handleChange}
               ></input>
               <label>Email</label>
               <input
@@ -87,6 +98,7 @@ const SignIn = () => {
                 className="input-field"
                 placeholder="Email"
                 required
+                onChange={handleChange}
               ></input>
               <label>Password</label>
               <input
@@ -94,6 +106,7 @@ const SignIn = () => {
                 className="input-field"
                 placeholder="Enter Password"
                 required
+                onChange={handleChange}
               ></input>
 
               <label className="pro-check">I would like to be a Pro</label>
@@ -101,6 +114,7 @@ const SignIn = () => {
                 type="checkbox"
                 className="check-boxpro"
                 onClick={handleCheck}
+                onChange={handleChange}
               ></input>
 
               {checked && (
@@ -110,18 +124,21 @@ const SignIn = () => {
                     className="input-field"
                     placeholder="Business Name"
                     required
+                    onChange={handleChange}
                   ></input>
                   <input
                     type="text"
                     className="input-field"
                     required
                     placeholder="Type of Business"
+                    onChange={handleChange}
                   ></input>
                   <input
                     type="text"
                     className="input-field"
                     required
                     placeholder="Phone Number"
+                    onChange={handleChange}
                   ></input>
                 </div>
               )}

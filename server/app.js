@@ -19,9 +19,6 @@ app.use(morgan('dev'));
 
 // Unauthenticated routes
 app.use('/api/communities', openRoutes);
-
-app.use(openRoutesTwo);
-app.use(openRoutesThree);
 app.use(APIsRoutes);
 
 app.use('/api/listings', openRoutesTwo);
