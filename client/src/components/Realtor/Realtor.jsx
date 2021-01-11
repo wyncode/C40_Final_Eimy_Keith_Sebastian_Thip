@@ -12,8 +12,8 @@ function Realtor() {
     const getRealtor = async () => {
       try {
         const response = await axios.get(`/api/realtor?term=${contextSearch}`);
-        setRealtorData(response.data.realtor);
-        console.log(response.data.realtor);
+        //setRealtorData(response.data);
+        console.log(response.data);
       } catch (error) {
         console.log(error);
       }

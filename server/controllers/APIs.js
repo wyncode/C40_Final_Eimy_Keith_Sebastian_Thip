@@ -41,15 +41,44 @@ exports.searchSchoolsAPI = async (request, response) => {
 
 //Realtor API
 exports.searchRealtorAPI = async (request, response) => {
-  try {
-    const { term } = request.query;
-    const data = await axios.get(
-      `https://rapidapi.com/apidojo/api/realtor?endpoint=${process.env.REALTOR_API_KEY}`
-    );
-    response.send(data.data);
-  } catch (e) {
-    console.log(e);
-  }
+  var axios = require('axios').default;
+
+  var options = {
+    method: 'GET',
+    url: 'https://realtor.p.rapidapi.com/properties/v2/list-for-sale',
+    params: {
+      city: 'Miami',
+      limit: '200',
+      offset: '0',
+      state_code: 'FL',
+      sort: 'relevance'
+    },
+    headers: {
+      'x-rapidapi-key': process.env.REALTOR_API_KEY,
+      'x-rapidapi-host': 'realtor.p.rapidapi.com'
+    }
+  };
+
+  axios
+    .request(options)
+    .then(function (res) {
+      response.json(res.data);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+  // try {
+  //   const { term } = request.query;
+  //   const data = await axios.get(
+
+  //     https://realtor.p.rapidapi.com/properties/v2/list-for-sale?city=Edgewater&limit=200&offset=0&state_code=FL
+  //     `https://rapidapi.com/apidojo/api/realtor?endpoint=${process.env.REALTOR_API_KEY}`
+  //   );
+  //   response.json(data);
+  //   console.log(data);
+  // } catch (e) {
+  //   console.log(e);
+  // }
 };
 
 // //Crime API
