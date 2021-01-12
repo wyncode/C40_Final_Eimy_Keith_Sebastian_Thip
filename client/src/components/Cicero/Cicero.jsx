@@ -4,6 +4,24 @@ import axios from 'axios';
 import './Cicero.css';
 import RepsCard from '../RepsCard/RepsCard';
 
+// function Cicero() {
+//   const [ciceroData, setCiceroData] = useState(null);
+//   const { contextSearch, setContextSearch } = useContext(AppContext);
+
+//   useEffect(() => {
+//     const getCicero = async () => {
+//       try {
+//         const response = await axios.get(`/api/cicero?term=${contextSearch}`);
+//         setSchoolData(response.data.cicero.school);
+//         console.log(response.data.cicero.school);
+//       } catch (error) {
+//         console.log(error);
+//       }
+//     };
+
+//     getCicero();
+//   }, []);
+
 const Reps = ({ history }) => {
   const { repData, setRepData } = useContext(AppContext);
   const { city, setCity } = useContext(AppContext);
@@ -27,7 +45,7 @@ const Reps = ({ history }) => {
     try {
       const response = await axios({
         method: 'GET',
-        url: `/rep/representatives?city=${city}`,
+        url: `/rep/representatives?city=${zipcode}`,
         headers: {
           'Content-Type': 'application/json'
         }

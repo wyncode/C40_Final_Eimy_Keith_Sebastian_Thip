@@ -1,66 +1,71 @@
-.main-card-body {
+.header1 {
+  margin-left: 103px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.schoolCards {
   display: flex;
   flex-direction: row;
-  display: grid;
+  justify-content: space-evenly;
 }
 
 .card-body {
   display: block;
   border: 1px solid black;
   padding: 30px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 20px;
   width: 200px;
-  height: 330px;
+  height: 310px;
 }
 
 .card-title {
   font-weight: bold;
   font-size: 20px;
   line-height: 1.2;
-  overflow: hidden;
-  position: relative;
-  min-height: calc(48px);
-}
-
-.school-card-info {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  font-size: 30px;
-  font-weight: bold;
+  text-align: left;
+  margin-top: -10px;
 }
 
 .school-type {
   color: rgb(134, 144, 153);
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.33;
   max-height: calc(31.92px);
   overflow: hidden;
   position: relative;
+  text-align: center;
 }
 
 .school-type-two {
   color: rgb(134, 144, 153);
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.33;
   max-height: calc(31.92px);
   overflow: hidden;
   position: relative;
-  margin-left: 10px;
-}
-
-.school-type-info li {
+  margin-left: 15px;
   display: flex;
   flex-direction: row;
-  font-size: 10px;
+  text-align: center;
+}
+
+.school-type-info {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  line-height: 1.33;
+  max-height: calc(31.92px);
+  color: rgb(134, 144, 153);
+  margin-left: 15px;
+  text-align: center;
 }
 
 .school-type-info div {
   display: flex;
   flex-direction: row;
-  font-size: 10px;
+  font-size: 15px;
+  text-align: center;
 }
 
 .school-rating {
@@ -86,6 +91,10 @@
   margin-bottom: 10px;
 }
 
+.school-rating-main {
+  margin-top: 20px;
+}
+
 .school-parentrating {
   border-radius: 200px;
   width: 64px;
@@ -94,7 +103,7 @@
   min-height: 64px;
   display: flex;
   overflow: hidden;
-  background-color: rgb(91, 97, 100);
+  background-color: rgb(114, 122, 126);
   color: rgb(255, 255, 255);
   -webkit-box-align: center;
   align-items: center;
@@ -123,4 +132,11 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.less-more {
+  height: 200px;
+  margin-top: 85px;
+  width: 3%;
+  font-size: 30px;
 }

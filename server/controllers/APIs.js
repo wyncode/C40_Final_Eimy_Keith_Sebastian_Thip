@@ -42,13 +42,13 @@ exports.searchSchoolsAPI = async (request, response) => {
 //Realtor API
 exports.searchRealtorAPI = async (request, response) => {
   var axios = require('axios').default;
-
+  const { term } = request.query;
   var options = {
     method: 'GET',
     url: 'https://realtor.p.rapidapi.com/properties/v2/list-for-sale',
     params: {
-      city: 'Miami',
-      limit: '200',
+      city: `${term}`,
+      limit: '20',
       offset: '0',
       state_code: 'FL',
       sort: 'relevance'
@@ -68,7 +68,7 @@ exports.searchRealtorAPI = async (request, response) => {
       console.error(error);
     });
   // try {
-  //   const { term } = request.query;
+
   //   const data = await axios.get(
 
   //     https://realtor.p.rapidapi.com/properties/v2/list-for-sale?city=Edgewater&limit=200&offset=0&state_code=FL
@@ -111,4 +111,20 @@ exports.getRepByAPI = async (req, res) => {
   } catch (e) {
     console.log(e);
   }
+
+  // exports.getRepByZipcode = async (req, res) => {
+  //   try {
+  //     const address = req.query.address;
+
+  //     const { data } = await axios({
+  //       url: `https://cicero.azavea.com/v3.1/official?search_postal=${address}&search_country=US&order=district_type&sort=desc&format=json&key=${process.env.CICERO_API_KEY}`,
+  //       method: 'GET'
+  //     });
+
+  //     const response = data.response.results.candidates[0];
+
+  //     res.status(200).json(response);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
 };

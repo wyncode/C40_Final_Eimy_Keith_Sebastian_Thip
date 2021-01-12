@@ -13,7 +13,6 @@ import Sidewalks from '../../Assests/sidewalk.png';
 import StreetLights from '../../Assests/street-light.png';
 import Thumb from '../../Assests/thumbs.png';
 import Avatar from '../../Assests/avatar.png';
-// import BootstrapCarousel from '../../components/Bootstrap/Bootstrap';
 // import Reps from '../../components/Cicero/Cicero';
 
 function Community() {
@@ -90,15 +89,47 @@ function Community() {
           </div>
         </div>
         <h3 className="LocalsMore">More</h3>
-        {/* <div className="CommunityCards">
-          <img className="Avatar" src={Avatar} alt="Avatar Icon"></img>
-          <h3>John Doe</h3>
-          <p>Resident</p>
-          <p>2 months ago</p>
-          <p></p>
-        </div> */}
+        <div className="CommunityCards">
+          <button className="less-more-two">←</button>
+          <div className="CommunityCardComment">
+            <img className="Avatar" src={Avatar} alt="Avatar Icon"></img>
+            <h3 className="AvatarName">Thip Keovilay</h3>
+            <p>Resident</p>
+            <p>2 months ago</p>
+            <p className="ResidentComment">
+              Great place to live. Lots of bars to go to. Wild times.
+            </p>
+          </div>
+          <div className="CommunityCardComment">
+            <img className="Avatar" src={Avatar} alt="Avatar Icon"></img>
+            <h3 className="AvatarName">Eimy Dunaway</h3>
+            <p>Resident</p>
+            <p>3 months ago</p>
+            <p className="ResidentComment">
+              Lovely place to raise your kids. Great schools.
+            </p>
+          </div>
+          <div className="CommunityCardComment">
+            <img className="Avatar" src={Avatar} alt="Avatar Icon"></img>
+            <h3 className="AvatarName">Keith Bryan</h3>
+            <p>Resident</p>
+            <p>4 months ago</p>
+            <p className="ResidentComment">
+              Great community to meet people. Met my wife here.
+            </p>
+          </div>
+          <div className="CommunityCardComment">
+            <img className="Avatar" src={Avatar} alt="Avatar Icon"></img>
+            <h3 className="AvatarName">Sebastian Arnavat</h3>
+            <p>Resident</p>
+            <p>5 months ago</p>
+            <p className="ResidentComment">
+              Great place to stay inside and not go anywhere.
+            </p>
+          </div>
+          <button className="less-more-three">→</button>
+        </div>
       </div>
-      {/* <BootstrapCarousel></BootstrapCarousel> */}
       <Schools></Schools>
       <Realtor></Realtor>
     </>

@@ -14,6 +14,7 @@ import Discounts from '../../Assests/discount.png';
 import Marker from '../../Assests/marker.png';
 import { Link } from 'react-router-dom';
 import Eimy from '../../Assests/eimy.jpg';
+import Logo from '../../Assests/logo.png';
 
 const ManageResults = () => {
   return (
@@ -306,11 +307,7 @@ const ManageResults = () => {
                   </div>
                 </div>
                 <div className="Hires">
-                  <img
-                    className="HireLogo"
-                    src={ReplyRate}
-                    alt="EstateRev Logo"
-                  ></img>
+                  <img className="HireLogo" src={Logo} alt="EstateRev"></img>
                   <p className="HiresNumber">429 hires on EstateRev</p>
                 </div>
               </div>
@@ -404,11 +401,7 @@ const ManageResults = () => {
                   </div>
                 </div>
                 <div className="Hires">
-                  <img
-                    className="HireLogo"
-                    src={ReplyRate}
-                    alt="EstateRev Logo"
-                  ></img>
+                  <img className="HireLogo" src={Logo} alt="EstateRev"></img>
                   <p className="HiresNumber">210 hires on EstateRev</p>
                 </div>
               </div>
@@ -508,11 +501,7 @@ const ManageResults = () => {
                   </div>
                 </div>
                 <div className="Hires">
-                  <img
-                    className="HireLogo"
-                    src={ReplyRate}
-                    alt="EstateRev Logo"
-                  ></img>
+                  <img className="HireLogo" src={Logo} alt="EstateRev"></img>
                   <p className="HiresNumber">7 hires on EstateRev</p>
                 </div>
               </div>
@@ -606,11 +595,7 @@ const ManageResults = () => {
                   </div>
                 </div>
                 <div className="Hires">
-                  <img
-                    className="HireLogo"
-                    src={ReplyRate}
-                    alt="EstateRev Logo"
-                  ></img>
+                  <img className="HireLogo" src={Logo} alt="EstateRev"></img>
                   <p className="HiresNumber">695 hires on EstateRev</p>
                 </div>
               </div>

@@ -77,7 +77,7 @@ class SimpleMap extends Component {
               >
                 {
                   // this.state.locations &&
-                  this.context?.contextSearch?.locations?.map((location) => {
+                  this.context?.results?.locations?.map((location) => {
                     console.log(location);
                     return (
                       <AnyReactComponent

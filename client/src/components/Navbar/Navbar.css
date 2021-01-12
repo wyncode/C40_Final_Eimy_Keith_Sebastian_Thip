@@ -37,4 +37,12 @@
 .navbar ul li {
   margin-right: 20px;
   list-style-type: none;
+  padding-top: 5px;
+}
+
+.Logo {
+  width: 100px;
+  height: 50px;
+  margin-bottom: -20px;
+  margin-top: -20px;
 }
