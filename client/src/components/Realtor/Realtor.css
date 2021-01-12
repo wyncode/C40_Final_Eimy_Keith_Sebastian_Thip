@@ -1,5 +1,40 @@
-.card-body {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+.realtorCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+.realtor-card-body {
+  display: block;
+  border: 1px solid black;
+  padding: 30px;
   grid-gap: 20px;
+  width: 200px;
+  height: 300px;
+}
+
+.realtor-card-general-info {
+  text-align: left;
+}
+
+.realtor-thumbnail img {
+  width: 220px;
+  height: 130px;
+  background: cover;
+  margin-left: -14px;
+}
+
+.realtor-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.realtor-description {
+  display: flex;
+  flex-direction: row;
+}
+
+.desc-two {
+  margin-left: 10px;
 }

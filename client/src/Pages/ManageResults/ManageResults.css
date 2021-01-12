@@ -140,7 +140,7 @@
   box-shadow: 1px 1px 1px 1px rgb(0.1, 0.1, 0.1, 0.1);
   display: flex;
   flex-direction: row;
-  margin-left: 160px;
+  margin-left: 210px;
   padding: 10px;
   margin-bottom: 30px;
 }
@@ -260,4 +260,11 @@
 .Reset {
   color: grey;
   padding-right: 153px;
+}
+
+.HireLogo {
+  background-color: #102229;
+  width: 60px;
+  height: 37px;
+  margin-right: 10px;
 }
